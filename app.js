@@ -29,7 +29,7 @@ mongoose.connect('mongodb://localhost/cesar_api', {
 }).catch(err=>{
     console.log('Falhou'+err);
 });
-app.get('/', (req,res)=>{
+app.get('/artigo', (req,res)=>{
     Artigo.find({}).then((artigos)=>{
         return res.json(artigos);
     }).catch(err=>{
